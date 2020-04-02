@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ewelink</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+ <div id="devices"></div>
+<form style="display: none;" id="login-form" class="has-float-label" method="post">
+
+    <div class="input-wrapper ">
+        <input id="login-email" autocomplete="on" required="" class="form-control h5-email" placeholder="email@address.com" name="email" value="" type="email" >
+        <label for="login-email"><i class="icon-user">&#128231;</i> E-mail:</label>
+    </div>
+
+    <div class="input-wrapper ">
+        <span class="show-password" onclick="document.querySelector('#login-pass').setAttribute('type','text');">
+             <i class="icon-eye password-show">&#128065;</i>
+        </span>
+        <input id="login-pass" required="" class="form-control" name="password" placeholder="Password" value="" type="password">
+        <label for="login-pass">    <i class="icon-lock">&#128274;</i> Password :</label>
+    </div>
+    <div class="input-wrapper ">
+
+        <select name="region" class="form-control" id="region">
+            <option value="eu">EU</option>
+            <option value="us">US</option>
+            <option value="as">AS</option>
+        </select>
+        <label for="region">Region :</label>
+    </div>
+    <div class="input-wrapper ">
+        <input id="ttl-ipt" required="" class="form-control" name="ttl" placeholder="Cache TTL" value="43200" type="number">
+        <label for="ttl-ipt">    Cache TTL (in minutes - default 1H):</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg">Send</button>
+</form>
+
+ <span class="btn btn-primary" id="reloadDevices" onclick="app.getDevices();">Reload Devices</span>
+
+ <span class="btn btn-primary" id="logout" onclick="app.logOut();">Logout</span>
+
+
+ <div id="out"></div>
+
+ <script src="CryptoJS.js"></script>
+ <script src="localStorageCookie.js"></script>
+<script src="app.js" defer></script>
+
+</body>
+</html>

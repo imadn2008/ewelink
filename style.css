@@ -1,0 +1,242 @@
+html {font-size:81.25%/*  */}
+html, body {height: auto ;    -ms-text-size-adjust: 100%;    -webkit-text-size-adjust: 100%;}
+body {margin: 0;text-size-adjust: 100%; }
+*, *::after, *::before {    box-sizing: border-box;}
+html,body,input{padding: 0; margin: 0;font-family:Arial,sans-serif; font-weight:300;font-size: 90%;line-height: 1.5;color:#3A3E4A; }
+input{font-size: 1rem;}
+
+html,body{ background: #FEFEFE;}
+#out{ font-size: 10px;}
+
+form{ margin: 2em auto; max-width: 360px; padding: 1em;}
+
+
+/* region form-controls */
+
+.show-password {
+      position: absolute;
+      top: 0;
+      z-index: 999;
+      right: 0;
+      font-size: 22px;
+      padding: 8px 12px;
+      border-left: 1px solid #DDD;
+      cursor: pointer;
+  }
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.form-control::-moz-placeholder {
+    color: #999999;
+    opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+    color: #999999;
+}
+.form-control::-webkit-input-placeholder {
+    color: #999999;
+}
+.form-control::-ms-expand {
+    border: 0;
+    background-color: transparent;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    background-color: #eeeeee;
+    opacity: 1;
+}
+.form-control[disabled],
+fieldset[disabled] .form-control {
+    cursor: not-allowed;
+}
+textarea.form-control {
+    height: auto;
+}
+input[type="search"] {
+    -webkit-appearance: none;
+}
+/* Powered by: https://github.com/tonystar/float-label-css
+ */
+/* Re-usable mixins
+ * https://github.com/tonystar/float-label-css/blob/master/scss/_mixins.scss
+ */
+/* Default styling
+ * https://github.com/tonystar/float-label-css/blob/master/scss/float-label.scss
+ */
+.input-wrapper{ position: relative; margin-bottom: 15px; }
+.has-float-label {
+    display: block;
+    position: relative;
+}
+
+.has-float-label input+label,
+.has-float-label select+label,
+.has-float-label textarea+label{
+    left: 0;
+    text-indent: 14px;
+    position: absolute;
+    top:5px;
+    cursor: text;
+    opacity: .8;
+    font-size: 0.8rem;
+    padding: 0;
+    text-transform: uppercase;
+    transition: all .2s;
+    z-index: 3;
+}
+.has-float-label select {    -webkit-appearance: none;    -moz-appearance: none;    appearance: none;}
+.has-float-label .input-wrapper input, .has-float-label .input-wrapper select , .has-float-label .input-wrapper textarea {font-size: 1.05rem;
+    line-height: 18px;
+    padding-top: 24px;
+    z-index: 2/*bootstrap*/;
+}
+
+.has-float-label input::-webkit-input-placeholder
+, .has-float-label select::-webkit-input-placeholder
+, .has-float-label textarea::-webkit-input-placeholder{opacity: 1;transition: all .2s;}
+.has-float-label input:-ms-input-placeholder
+, .has-float-label select:-ms-input-placeholder
+, .has-float-label textarea:-ms-input-placeholder {    opacity: 1;    transition: all .2s;}
+.has-float-label input::-ms-input-placeholder
+, .has-float-label select::-ms-input-placeholder
+, .has-float-label textarea::-ms-input-placeholder{    opacity: 1;    transition: all .2s;}
+.has-float-label input::placeholder
+, .has-float-label select::placeholder
+, .has-float-label textarea::placeholder{    opacity: 1;    transition: all .2s;}
+.has-float-label input:placeholder-shown:not(:focus)::-webkit-input-placeholder
+, .has-float-label select:placeholder-shown:not(:focus)::-webkit-input-placeholder
+, .has-float-label textarea:placeholder-shown:not(:focus)::-webkit-input-placeholder {    opacity: 0;}
+.has-float-label input:placeholder-shown:not(:focus):-ms-input-placeholder
+, .has-float-label select:placeholder-shown:not(:focus):-ms-input-placeholder
+, .has-float-label textarea:placeholder-shown:not(:focus):-ms-input-placeholder{    opacity: 0;}
+.has-float-label input:placeholder-shown:not(:focus)::-ms-input-placeholder
+, .has-float-label select:placeholder-shown:not(:focus)::-ms-input-placeholder
+, .has-float-label textarea:placeholder-shown:not(:focus)::-ms-input-placeholder {    opacity: 0;}
+.has-float-label input:placeholder-shown:not(:focus)::placeholder
+, .has-float-label select:placeholder-shown:not(:focus)::placeholder
+, .has-float-label textarea:placeholder-shown:not(:focus)::placeholder {    opacity: 0;}
+.has-float-label input:placeholder-shown:not(:focus) + label
+, .has-float-label select:placeholder-shown:not(:focus) + label
+, .has-float-label textarea:placeholder-shown:not(:focus) + label{
+    opacity: .5;
+    top: 16px;
+    font-size: 12px;
+    padding-top:0;
+}
+
+
+
+.has-float-label input:focus, .has-float-label select:focus, .has-float-label textarea:focus {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.has-float-label input:focus + label, .has-float-label select:focus + label, .has-float-label textarea:focus + label{
+    color:#337ab7;
+}
+
+.has-float-label select {
+    padding-right: 1em;
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E")
+    no-repeat right 0.5em bottom 0.25em;background-position-y: 50%; background-color: #FFF;
+    background-size: 8px 10px;
+}
+
+
+.has-float-label label i{text-indent: 0;font-size: 15px;line-height: 15px;}
+
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn-primary{ background: #EEE}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+/* endregion */
+
+#devices{ display: flex; flex-wrap: wrap;}
+.device{
+    min-width: 12em;
+    background: #FFF;
+    box-shadow:#EEE 0 0 8px; 
+    margin-top: 1em;
+margin-left: 1em;
+    display: inline-block;
+    padding: 1em;
+    cursor: pointer;
+    line-height: 35px;
+    position: relative;
+font-size: 16px;
+}
+#reloadDevices{visibility:hidden;}
+#logout {}
+
+.device .wifi{ position: absolute ; top:3px; right:3px;opacity: 0.3;}
+[data-online="false"]{ color:#CCC; background: #f9f9f9; cursor:not-allowed }
+[data-status="on"] .switch{ border: chartreuse 1px solid; color: chartreuse}
+[data-status="on"] .switch:after{content: "ON"}
+[data-status="off"] .switch{ border: red 1px solid; color: red}
+[data-status="off"] .switch:after{content: "OFF"}
+
+[data-online="false"] .switch{ border-color:#CCC; color:#CCC;}
+
+.switch{ height: 35px; display: inline-block; min-width: 35px; border-radius: 50%; background: #FFF; line-height: 35px; font-size: 10px; text-align: center; margin-right: 5px; }
+.rf-switch{  background: #F5F9FF; line-height: 35px; text-align: center; /*padding: 0 0.2em; margin: 0 0.1em;*/}
+
+.rf-switch:after{ content: '';}
+
+
+.wifi {display: inline-block;width:13px;height:10px;position:relative;overflow: hidden;}
+.wifi:before {     position:absolute;    top: 0;content:"";display:block;width:2px;height:10px;background:none;
+    box-shadow:  green 2px 8px 0 0, green 5px 5px 0 0  ,green 8px 3px 0 0,green 11px 0 0 0;}
+.wifi-0:before,.wifi-1:before{ box-shadow:  2px 8px 0 0  #DDD ,5px 5px 0 0 #DDD ,8px 3px 0 0 #DDD, 11px 0 0 0 #DDD; }
+.wifi-2:before,.wifi-3:before{ box-shadow:  red 2px 8px 0 0,5px 5px 0 0 #DDD ,8px 3px 0 0 #DDD, 11px 0 0 0 #DDD; }
+.wifi-4:before,.wifi-5:before{ box-shadow:  red 2px 8px 0 0,red 5px 5px 0 0 ,8px 3px 0 0 #DDD, 11px 0 0 0 #DDD; }
+.wifi-6:before,.wifi-7:before,.wifi-8:before{ box-shadow: green 2px 8px 0 0,green 5px 5px 0 0 ,green 8px 3px 0 0, 11px 0 0 0 #DDD; }

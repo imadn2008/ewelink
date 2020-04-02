@@ -1,0 +1,24 @@
+{
+  "config": {
+    "github-oauth": {
+
+    }
+  },
+  "autoload": {
+    "psr-0": {"": "src/"}
+  },
+
+  "repositories": [
+    {
+
+      "url": "https://github.com/tlissak/ewelink",
+      "type":"vcs"
+    }
+  ],
+
+    "require": {
+        "ext-json": "*",
+        "ext-curl": "*",
+      "ext-apache": "*"
+    }
+}
